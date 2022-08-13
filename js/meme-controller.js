@@ -232,3 +232,7 @@ function toggleMenu() {
     elGalleryContainer.classList.add(gMenuOpen ? 'none' : 'flex')
     elGalleryContainer.classList.remove(gMenuOpen ? 'flex' : 'none')
 }
+
+function onShareMeme() {
+    uploadImg(true)
+}

@@ -7,7 +7,7 @@ const gImgs = [
         url: 'images/3.jpg',
         keywords: ['baby', 'puppy', 'sleeping', 'adorable']
     },
-    { id: 4, url: 'images/4.jpg', keywords: ['kitty', 'sleep', 'tired'] },
+    { id: 4, url: 'images/4.jpg', keywords: ['kitty', 'sleeping', 'tired'] },
     { id: 5, url: 'images/5.jpg', keywords: ['baby', 'win', 'power'] },
     {
         id: 6,

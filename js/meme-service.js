@@ -3,25 +3,6 @@
 let gSelectedLine
 let gMeme
 
-// let gMeme = {
-//     selectedImgId: 5,
-//     selectedLineIdx: 0,
-//     lines: [
-//         {
-//             txt: 'I sometimes eat Falafel',
-//             size: 20, margin-top: 50px;
-//             align: 'left',
-//             color: 'red'
-//         }
-//     ]
-// }
-
-// const linesPos = {
-//     firstLine: { x: 20, y: 70 },
-//     secondLine: { x: 20, y: 430 },
-//     newLine: { x: 20, y: 250 }
-// }
-
 let gFilterBy = ''
 let showMore = false
 
@@ -59,12 +40,6 @@ function moreKeywords() {
     showMoreOrLess()
     renderKeywordsList()
 }
-
-// const gDirections = {
-//     left: 20,
-//     right: 430,
-//     center: 225
-// }
 
 function setImgFilterBy(filterBy) {
     gFilterBy = filterBy
@@ -161,32 +136,6 @@ function _createNewLine() {
 }
 
 function shuffleMeme() {
-    // gMeme = {
-    //     selectedImgId: imgId,
-    //     selectedLineIdx: 0,
-    //     lines: [
-    //         {
-    //             txt: '',
-    //             size: lineSettings.size,
-    //             align: 'left',
-    //             color: lineSettings.color,
-    //             pos: { y: 70 }
-    //         }
-    //     ]
-    // }
-    // gMeme = {
-    //     selectedImgId: getRandomInt(1, 18),
-    //     selectedLineIdx: 0,
-    //     lines: [
-    //         {
-    //             txt: makeRandomText(getRandomInt(0, 4)),
-    //             size: lineSettings.size,
-    //             align: 'left',
-    //             color: lineSettings.color,
-    //             pos: { y: 70 }
-    //         }
-    //     ]
-    // }
     gSelectedLine = gMeme.lines[gMeme.selectedLineIdx]
 }
 
@@ -201,11 +150,6 @@ function selectedLineChange(newLineIdx) {
 }
 
 function moveLine(dy) {
-    // gMeme.selectedLineIdx++
-    // if (gMeme.selectedLineIdx >= gMeme.lines.length) {
-    //     gMeme.selectedLineIdx = 0
-    // }
-    // gSelectedLine = gMeme.lines[gMeme.selectedLineIdx]
     gSelectedLine.pos.y = dy
 }
 
