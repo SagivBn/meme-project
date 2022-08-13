@@ -27,7 +27,7 @@ li {
 }
 
 /* Helpers */
-.fa {
+.fa-bars {
     font-family: fa;
 }
 
@@ -619,6 +619,7 @@ ul {
         width: 30px;
         color: white;
         margin-right: 20px;
+        display: flex;
     }
 
     .menu-container {
