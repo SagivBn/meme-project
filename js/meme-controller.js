@@ -3,6 +3,7 @@ let gIsGrabbed = false
 let gElCanvas
 let gCtx
 const gLineStart = {}
+let gMenuOpen = false
 
 function initCanvas() {
     gElCanvas = document.querySelector('canvas')
@@ -216,4 +217,18 @@ function onDownloadMeme(elLink) {
 function OnCloseMemeEditor() {
     const elMemeEditor = document.querySelector('.meme-editor')
     elMemeEditor.classList.remove('show')
+}
+
+function toggleMenu() {
+    gMenuOpen = !gMenuOpen
+
+    const elMenu = document.querySelector('.menu-container')
+    elMenu.classList.add(gMenuOpen ? 'flex' : 'none')
+    elMenu.classList.remove(gMenuOpen ? 'none' : 'flex')
+
+    const elGalleryContainer = document.querySelector(
+        '.image-gallery-container'
+    )
+    elGalleryContainer.classList.add(gMenuOpen ? 'none' : 'flex')
+    elGalleryContainer.classList.remove(gMenuOpen ? 'flex' : 'none')
 }

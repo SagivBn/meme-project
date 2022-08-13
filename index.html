@@ -8,11 +8,13 @@
   <title>Meme Generator</title>
   <link rel="icon" href="images/clown-fav.png" />
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onload="onInit()">
   <header class="header-container flex flex-space-between">
-    <div class="text">LOGO</div>
+    <div class="text logo">LOGO</div>
+    <i class="fa fa-bars menu" onclick="toggleMenu()"></i>
     <ul class="header-nav flex flex-align-center flex-space-between">
       <li class="nav-selected gallery-container">
         <span class="nav-text-selected gallery" onclick="onClickGallery()">Gallery</span>
@@ -21,8 +23,13 @@
       <li class="about-container"><span class="nav-text about">About</span></li>
     </ul>
   </header>
+
+  <div class="menu-container none">
+    <div class="text" onclick="onClickGallery();toggleMenu()">Gallery</div>
+    <div class="text" onclick="toggleMenu();onShuffleMeme();">Memes</div>
+    <div class="text" onclick="toggleMenu()">About</div>
+  </div>
   <main class="image-gallery-container flex flex-col">
-    <!-- </div> -->
     <div class="search-bar-keywords-container flex">
       <div class="search-bar-container flex flex-space-between">
         <input class="search-bar" placeholder="Search" oninput="galleryFilter(this)" list="memes" />

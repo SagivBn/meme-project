@@ -13,12 +13,17 @@ li {
 
 @font-face {
     font-family: Poppins;
-    src: url(/Sprint2/fonts/Poppins-Regular.ttf);
+    src: url(../fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
     font-family: fa;
-    src: url(/Sprint2/fonts/FontAwesome/fa-solid-900.ttf);
+    src: url(../fonts/FontAwesome/fa-solid-900.ttf);
+}
+
+@font-face {
+    font-family: fa-regular;
+    src: url(../fonts/FontAwesome/fa-regular-400.ttf);
 }
 
 /* Helpers */
@@ -493,8 +498,12 @@ ul {
     .header-container {
         width: 100vw;
         margin: 0;
-        padding-left: 107px;
+        padding-left: 0;
         border-radius: 0;
+        overflow-x: hidden;
+    }
+    .logo {
+        margin-left: 40px;
     }
 
     .more-btn {
@@ -548,5 +557,77 @@ ul {
         /* max-height: 20px; */
         font-size: 6px;
         padding: 8px;
+    }
+
+    .meme-editor {
+        margin: 0;
+        flex-direction: column;
+        padding: 16px;
+        row-gap: 20px;
+    }
+    canvas {
+        width: 100%;
+    }
+
+    .editor-controller {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .text-input-container {
+        margin-bottom: 16px;
+    }
+
+    [name='text-input'] {
+        width: 250px;
+        /* margin: 12px; */
+        font-size: 16px;
+        margin: 0;
+    }
+    .text-btn-container {
+        width: 100%;
+    }
+    .faces {
+        width: 100%;
+    }
+
+    .faces > img {
+        width: 60px;
+    }
+    .share-download-btns {
+        flex-direction: column;
+    }
+
+    .text-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .text-btn > img {
+        width: 30px;
+        height: 20px;
+    }
+    .move-line-down-btn::before {
+        content: '\f884';
+        font-size: 25px;
+    }
+
+    .move-line-up-btn::before {
+        content: '\f885';
+        font-size: 25px;
+    }
+    .menu {
+        width: 30px;
+        color: white;
+        margin-right: 20px;
+    }
+
+    .menu-container {
+        overflow-x: hidden;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
     }
 }
