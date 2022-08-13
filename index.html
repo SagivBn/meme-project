@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme Generator</title>
+  <link rel="icon" href="images/clown-fav.png" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body onload="onInit()">
+  <header class="header-container flex flex-space-between">
+    <div class="text">LOGO</div>
+    <ul class="header-nav flex flex-align-center flex-space-between">
+      <li class="nav-selected gallery-container">
+        <span class="nav-text-selected gallery" onclick="onClickGallery()">Gallery</span>
+      </li>
+      <li class="memes-container" onclick="onShuffleMeme()"><span class="nav-text memes">Memes</span></li>
+      <li class="about-container"><span class="nav-text about">About</span></li>
+    </ul>
+  </header>
+  <main class="image-gallery-container flex flex-col">
+    <!-- </div> -->
+    <div class="search-bar-keywords-container flex">
+      <div class="search-bar-container flex flex-space-between">
+        <input class="search-bar" placeholder="Search" oninput="galleryFilter(this)" list="memes" />
+        <img src="icon/svg/search-icon.svg" alt="">
+        <datalist id="memes">
+          <option value="president">
+          <option value="mean">
+          <option value="trump">
+          <option value="dog">
+          <option value="cute">
+          <option value="baby">
+          <option value="cat">
+          <option value="sleepy">
+          <option value="success">
+          <option value="explain">
+          <option value="history">
+          <option value="surprise">
+          <option value="wonder">
+          <option value="clown">
+          <option value="laugh">
+          <option value="obama">
+          <option value="kissing">
+          <option value="pointing">
+          <option value="interesting">
+          <option value="cheering">
+          <option value="leonardo di caprio">
+          <option value="laugh">
+          <option value="serious">
+          <option value="matrix">
+          <option value="sunglasses">
+          <option value="one does not">
+          <option value="lord of the rings">
+          <option value="star trek">
+          <option value="putin">
+          <option value="president">
+          <option value="buzz">
+          <option value="toy story">
+        </datalist>
+      </div>
+      <div class="flex flex-align-center">
+        <div class="searched-key-words">
+        </div>
+        <button class="more-btn text" onClick="moreKeywords()">More</button>
+
+      </div>
+    </div>
+    <div class="meme-gallery flex-row">
+      <img src="images/1.jpg" class="img1" />
+    </div>
+    <section class="meme-editor none">
+      <div class="canvas-container">
+        <canvas height="546px" width="546px">
+        </canvas>
+      </div>
+      <div class="editor-controller flex flex-col">
+        <div class="text-input-container">
+          <input oninput="onChangeText(this)" type="text" id="text-input" name="text-input"
+            placeholder="Enter your text here" />
+        </div>
+        <div class="first-btns flex">
+
+          <button class="btn add-text-btn" onclick="onAddLine()"><img src="icon/plus.png" alt=""></button>
+          <button class="btn switch-line" onclick="onMoveLineByButtons()">
+            <img src="icon/svg/up-down.svg" alt="" />
+          </button>
+          <button class="btn delete-line" onclick="onDeleteLine()">
+            <img src="icon/svg/recycle-bin.svg" width="28" alt="" />
+          </button>
+        </div>
+        <div class="text-btn-container">
+          <div class="first-row-btn flex">
+
+            <button class="text-btn" onclick="onIncreaseFontSize()">
+              <img src="icon/A+.png" alt="" />
+            </button>
+            <button class="text-btn" onclick="onDecreaseFontSize()">
+              <img src="icon/A-.png" alt="" />
+            </button>
+            <button class="text-btn" onclick="onChangeTextAlign('left')">
+              <img src="icon/svg/LTR.svg" alt="" />
+            </button>
+            <button class="text-btn" onclick="onChangeTextAlign('center')">
+              <img src="icon/svg/center.svg" alt="" />
+            </button>
+
+            <button class="text-btn" onclick="onChangeTextAlign('right')">
+              <img src="icon/svg/RTL.svg" alt="align-to-right" />
+            </button>
+          </div>
+          <div class="second-row-btn flex">
+            <button class="fa text-btn move-line-down-btn" onclick="onHeightRowChange(10)"></button>
+            <button class="fa text-btn move-line-up-btn" onclick="onHeightRowChange(-10)"></button>
+            <button class="text-btn">
+              <input class="opacity pointer" oninput="onChangeColor(this)" type="color" default="image" />
+              <img onclick="clickInput()" src="icon/svg/color-change.svg" alt="" />
+            </button>
+            </button>
+          </div>
+        </div>
+        <div class="faces flex flex-space-between">
+          <img class="left" src="icon/svg/left.svg" alt="">
+          <img src="icon/svg/face1.svg" alt="">
+          <img src="icon/svg/face2.svg" alt="">
+          <img src="icon/svg/face3.svg" alt="">
+          <img src="icon/svg/face4.svg" alt="">
+          <img class="right" src="icon/svg/right.svg" alt="">
+        </div>
+        <div class="share-download-btns flex flex-space-between">
+          <button class="action-btn blue">
+            <img src="icon/share.png" alt="" srcset="">
+            <span class="text">
+              Share
+            </span>
+          </button>
+          <a href="#" onclick="onDownloadMeme(this)" class="download-container" download="my-new-meme">
+            <button class="action-btn">
+              <img src="icon/download.png" alt="">
+              <span class="text">
+                Download
+              </span>
+            </button>
+          </a>
+        </div>
+
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+<script src="js/storage.service.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/meme-service.js"></script>
+<script src="js/gallery.sercive.js"></script>
+<script src="js/meme-controller.js"></script>
+<script src="js/gallery-controller.js"></script>
+
+</html>
