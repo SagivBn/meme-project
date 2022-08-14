@@ -1,0 +1,12 @@
+:root {
+    --clr1: #21ac91;
+    --clr2: #383b42;
+    --clr3: #22252c;
+    --clr4: rgba(0, 0, 0, 0.15);
+    --clr5: #fefefe;
+    --clr6: #bbc4d1;
+    --clr7: #ebeef3;
+
+    --wide: 1245px;
+    --small: 645px;
+}

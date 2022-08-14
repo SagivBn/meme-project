@@ -1,0 +1,117 @@
+.header-container {
+    /* Style for "Rectangle" */
+    margin: 16px 0;
+    width: 1257px;
+    padding-left: 81px;
+    align-items: center;
+    height: 73px;
+    border-radius: 37px;
+    background-color: #5970c1;
+    background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+}
+
+.header-nav {
+    padding-right: 247px;
+    column-gap: 42px;
+    list-style: none;
+}
+
+.nav-selected {
+    /* Style for "Rectangle" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 40px;
+    box-shadow: 0 3px 6px 1px rgba(var(--clr4));
+    border-radius: 20px;
+    background-color: #fefefe;
+}
+
+.nav-text-selected {
+    /* Style for "Gallery" */
+    color: #21ac91;
+    /* font-family: Poppins; */
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    cursor: pointer;
+}
+
+.nav-text {
+    /* Style for "About" */
+    color: #ffffff;
+    /* font-family: Poppins; */
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    cursor: pointer;
+}
+
+.search-bar-container {
+    /* Style for "Rectangle" */
+    align-items: center;
+    width: 541px;
+    height: 58px;
+    border-radius: 29px;
+    background-color: var(--clr3);
+    padding-left: 50px;
+    padding-right: 26px;
+}
+
+.search-bar-keywords-container {
+    align-items: center;
+}
+
+.search-bar {
+    background-color: inherit;
+    border: none;
+    outline-color: none;
+    background-color: var(--clr3);
+    cursor: text;
+    outline: none;
+    color: white;
+    width: 100px;
+}
+
+.searched-key-words {
+    /* Style for "Rectangle" */
+    margin-left: 15px;
+    width: 536px;
+    min-height: 50px;
+    box-shadow: 0 3px 6px 1px rgba(var(--clr4));
+    border-radius: 25px;
+    background-color: var(--clr5);
+    opacity: 0.4;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    /* justify-content: space-evenly; */
+}
+
+.search-key-words-open {
+    height: 150px;
+}
+
+.more-btn {
+    /* Style for "Rectangle" */
+    width: 92px;
+    height: 36px;
+    box-shadow: 0 3px 6px 1px rgba(var(--clr4));
+    border-radius: 18px;
+    background-color: var(--clr5);
+    background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+    margin-left: 21px;
+    cursor: pointer;
+}
+.menu {
+    display: none;
+}

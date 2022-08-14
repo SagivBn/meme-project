@@ -1,0 +1,16 @@
+.gallery-image {
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    box-shadow: 0 10px 15px 16px rgba(var(--clr4));
+}
+
+.image-gallery-container {
+    /* Style for "Rectangle" */
+    width: 1250px;
+    padding: 25px 30px 0 30px;
+    height: 900px;
+    border-radius: 10px;
+    background-color: var(--clr2);
+}

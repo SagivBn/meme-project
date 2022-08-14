@@ -14,7 +14,9 @@
 <body onload="onInit()">
   <header class="header-container flex flex-space-between">
     <div class="text logo">LOGO</div>
-    <i class="fa-bars menu none" onclick="toggleMenu()"></i>
+    <div class="menu">
+      <i class="fa fa-bars menu" onclick="onToggleMenu()"></i>
+    </div>
     <ul class="header-nav flex flex-align-center flex-space-between">
       <li class="nav-selected gallery-container">
         <span class="nav-text-selected gallery" onclick="onClickGallery()">Gallery</span>
@@ -25,14 +27,14 @@
   </header>
 
   <div class="menu-container none">
-    <div class="text" onclick="onClickGallery();toggleMenu()">Gallery</div>
-    <div class="text" onclick="toggleMenu();onShuffleMeme();">Memes</div>
-    <div class="text" onclick="toggleMenu()">About</div>
+    <div class="text" onclick="onClickGallery();onToggleMenu()">Gallery</div>
+    <div class="text" onclick="onToggleMenu();onShuffleMeme();">Memes</div>
+    <div class="text" onclick="onToggleMenu()">About</div>
   </div>
   <main class="image-gallery-container flex flex-col">
     <div class="search-bar-keywords-container flex">
       <div class="search-bar-container flex flex-space-between">
-        <input class="search-bar" placeholder="Search" oninput="galleryFilter(this)" list="memes" />
+        <input class="search-bar" placeholder="Search" oninput="onGalleryFilter(this)" list="memes" />
         <img src="icon/svg/search-icon.svg" alt="">
         <datalist id="memes">
           <option value="president">
@@ -123,8 +125,8 @@
             </button>
           </div>
           <div class="second-row-btn flex">
-            <button class="fa-regular text-btn move-line-down-btn" onclick="onHeightRowChange(10)"></button>
-            <button class="fa-regular text-btn move-line-up-btn" onclick="onHeightRowChange(-10)"></button>
+            <button class="fa text-btn move-line-down-btn" onclick="onHeightRowChange(10)"></button>
+            <button class="fa text-btn move-line-up-btn" onclick="onHeightRowChange(-10)"></button>
             <button class="text-btn">
               <input class="opacity pointer" oninput="onChangeColor(this)" type="color" default="image" />
               <img onclick="clickInput()" src="icon/svg/color-change.svg" alt="" />
@@ -132,14 +134,14 @@
             </button>
           </div>
         </div>
-        <div class="faces flex flex-space-between">
+        <!-- <div class="faces flex flex-space-between">
           <img class="left" src="icon/svg/left.svg" alt="">
           <img src="icon/svg/face1.svg" alt="">
           <img src="icon/svg/face2.svg" alt="">
           <img src="icon/svg/face3.svg" alt="">
           <img src="icon/svg/face4.svg" alt="">
           <img class="right" src="icon/svg/right.svg" alt="">
-        </div>
+        </div> -->
         <div class="share-download-btns flex flex-space-between">
           <button onclick=onShareMeme() class="action-btn blue">
             <img src="icon/share.png" alt="" srcset="">
@@ -168,10 +170,10 @@
 </body>
 <script src="js/storage.service.js"></script>
 <script src="js/utils.js"></script>
-<script src="js/upload-service.js"></script>
-<script src="js/meme-service.js"></script>
+<script src="js/upload.service.js"></script>
+<script src="js/meme.service.js"></script>
 <script src="js/gallery.sercive.js"></script>
-<script src="js/meme-controller.js"></script>
-<script src="js/gallery-controller.js"></script>
+<script src="js/meme.controller.js"></script>
+<script src="js/gallery.controller.js"></script>
 
 </html>

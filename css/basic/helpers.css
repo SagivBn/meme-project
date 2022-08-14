@@ -1,0 +1,57 @@
+/* Helpers */
+.fa-regular {
+    font-family: fa;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.opacity {
+    position: absolute;
+    opacity: 0;
+}
+
+.item {
+    border-radius: 10%;
+}
+
+.none {
+    display: none;
+}
+
+.first-btns {
+    column-gap: 31px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.blue {
+    background-color: #1e7cd3;
+}
