@@ -111,6 +111,9 @@
     background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
     margin-left: 21px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .menu {
     display: none;
